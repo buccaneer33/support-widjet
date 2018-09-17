@@ -1,11 +1,11 @@
 class WidgetPosition {
 
 	constructor() {
-     const TopPosition = {x:".top = '5%';", y:".right = '40%';"};
-     const LeftPosition = `this.widgetElement.style.top = '40%';this.widgetElement.style.left = '5%';`;
-     const RightPosition = `this.widgetElement.style.top = '40%';this.widgetElement.style.right = '5%';`;
-     const DownLeftPosition = `this.widgetElement.style.bottom = '5%';this.widgetElement.style.left = '5%';`;
-     const DownRightPosition = `this.widgetElement.style.bottom = '5%';this.widgetElement.style.right = '5%';`;
+     const TopPosition = {x:"5", y:"40"};
+     const LeftPosition = {x:"20", y:"5"};
+     const RightPosition = {x:"20", y:"74"};
+     const DownLeftPosition = {x:"40", y:"5"};
+     const DownRightPosition = {x:"40", y:"74"};
 
 		this.positionTypes = {
 			'top' : TopPosition,
@@ -17,6 +17,7 @@ class WidgetPosition {
 }
 
 	returnPosByType(positionType) {
+        console.log('positionType ' + positionType);
 		if(this.positionTypes.hasOwnProperty( positionType )) {
 			return this.positionTypes[positionType];
 }

@@ -15,13 +15,12 @@ function openWidjet(config, token){
 		person: 'Фиталий Филиповский',
 		personAtr: 'Консультант' 
 	};
-	
+	console.log('widgetPos ' + options.widgetPos); 
 	
 	let pos = new WidgetPosition();
-	let posSchema = pos.returnPosByType("top");
-	let x = JSON.stringify(posSchema);
-
-	console.log('x ' + x); 
+	let posSchema = pos.returnPosByType(options.widgetPos);
+	let x = (posSchema.x);                       
+	let y = (posSchema.y);
 
 	var Widget = {
 		created: false,
@@ -45,11 +44,8 @@ function openWidjet(config, token){
 			</form>
 		</div>`;
 			document.body.insertBefore(this.widgetElement, document.body.nextSibling);
-			posSchema;	
-
-			
-		/*	this.widgetElement.style.top = '50%';
-			this.widgetElement.style.right = '5%'; */
+			this.widgetElement.style.top =`${x}%`;
+			this.widgetElement.style.left = `${y}%`; 
 			
 			this.created = true;
 		}

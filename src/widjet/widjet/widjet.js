@@ -9,7 +9,7 @@ class Widget{
         // делаем вебсокер запрос о конфиге
         var config = {
             colorSchema: 'light',
-            widgetPos: 'up'
+            widgetPos: 'down-right'
         };
         return config;
     };
