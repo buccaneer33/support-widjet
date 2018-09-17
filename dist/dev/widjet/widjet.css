@@ -1,0 +1,58 @@
+#widget_container {
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 300px;
+  height: 400px;
+  padding: 5px; }
+
+.widget_container__body {
+  height: 100%;
+  width: 100%; }
+
+.widget_container__header {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .widget_container__header-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden; }
+  .widget_container__header-desc {
+    width: 240px;
+    height: 50px;
+    padding: 0 0 0 20px;
+    box-sizing: border-box; }
+  .widget_container__header h4 {
+    margin: 1px 0;
+    width: 200px;
+    height: 25px; }
+  .widget_container__header h5 {
+    margin: 1px 0;
+    width: 200px;
+    height: 25px; }
+
+.widget_container__form {
+  height: 85%;
+  width: 100%; }
+
+.widget_container__messages {
+  height: 62%;
+  width: 100%;
+  overflow-y: auto;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px; }
+
+.widget_container__button {
+  border-radius: 5px;
+  padding: 5px 15px; }
+
+/*# sourceMappingURL=widjet.css.map*/
