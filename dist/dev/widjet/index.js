@@ -159,11 +159,11 @@ var WidgetPosition = function () {
   function WidgetPosition() {
     _classCallCheck(this, WidgetPosition);
 
-    var TopPosition = { x: "5", y: "40" };
-    var LeftPosition = { x: "20", y: "5" };
-    var RightPosition = { x: "20", y: "74" };
-    var DownLeftPosition = { x: "40", y: "5" };
-    var DownRightPosition = { x: "40", y: "74" };
+    var TopPosition = { x: "30", y: "50" };
+    var LeftPosition = { x: "50", y: "15" };
+    var RightPosition = { x: "50", y: "85" };
+    var DownLeftPosition = { x: "70", y: "15" };
+    var DownRightPosition = { x: "70", y: "85" };
 
     this.positionTypes = {
       'top': TopPosition,
@@ -232,14 +232,11 @@ exports.default = LocalStorage;
 
 "use strict";
 
+// import View from '../view/view';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-
-var _view = __webpack_require__(/*! ../view/view */ "./src/widjet/widjet/view/view.js");
-
-var _view2 = _interopRequireDefault(_view);
 
 var _settings = __webpack_require__(/*! ../../settings/settings.js */ "./src/widjet/settings/settings.js");
 
@@ -275,32 +272,19 @@ function openWidjet(config, token) {
 		show: function show() {
 			if (this.created) return;
 			this.widgetElement = document.createElement('div');
-			this.widgetElement.setAttribute('id', 'widget_container');
-			this.widgetElement.innerHTML = '\n\t\t\t<div class="widget_container__body">\n\t\t\t<div class="widget_container__header">\n\t\t\t\t<div class="widget_container__header-img"><img src="https://secure.gravatar.com/avatar/0b1605b84a7bf445ce2af7348089c70c?s=60&d=mm&r=g" /></div>\n\t\t\t\t<div class="widget_container__header-desc"><h4>' + options.person + '</h4><h5>' + options.personAtr + '</h5></div>\n\t\t\t</div>\n\t\t\t<form class="widget_container__form">\n\t\t\t\t<div class="widget_container__messages"></div>\n\t\t\t\t<textarea rows="5" cols="30" name="text" placeholder="\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435"></textarea>\n\t\t\t\t<button type="button" id="widget_container__clear" class="widget_container__button">\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C</button>\n\t\t\t\t<button type="button" id="widget_container__submit" class="widget_container__button">\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C</button>\n\t\t\t</form>\n\t\t</div>';
+			this.widgetElement.setAttribute('class', 'support_widget');
+			this.widgetElement.classList.add('support_widget_container--down-right');
+			this.widgetElement.innerHTML = '\n\t\t\t<div class="support_widget__body support_widget__blue">\n\t\t\t<div class="support_widget__header">\n\t\t\t\t<div class="support_widget__header-img"><img src="https://secure.gravatar.com/avatar/0b1605b84a7bf445ce2af7348089c70c?s=60&d=mm&r=g" /></div>\n\t\t\t\t<div class="support_widget__header-desc"><h4>' + options.person + '</h4></div>\n\t\t\t</div>\n\t\t\t<form class="support_widget__form">\n\t\t\t\t<div class="support_widget__messages">\n\t\t\t\t\t<ul class="support_widget__mess-list">\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-user">\n\t\t\t\t\t\tqbbhbd bdbffb fbbfbf bbbfbfbb bzcbbbb! !!!!! qbbhbd bdbffbfbbfbfbbbfbfbbbzcbbbb !!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-admin">\n\t\t\t\t\t\tqbbhbdbdbffbfbbfbfbbbfbfbbbzcbbbb!!!!!!qbbhbdbdbffbfbbfbfbbbfbfbbbzcbbbb!!!!!!qbbhbdbdbffbfbbfbfbbbfbfbbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-user">\n\t\t\t\t\t\tqbbh bdbdbf fbfbbfb fbbbfbfbbbzcbbb b!!!! !!qbbhbdbd bffbfbbfbfbbbfbf bbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-admin">\n\t\t\t\t\t\tqbbhbdbdbffbfb bfbfbbbfb fbbbzcbbbb!! !!!!qbbhbdbdbff bfbbfbfb bbfbfbbbzc bbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-user">\n\t\t\t\t\t\tqbbhbdbdbffb fbbfbfbbbfbf bbbzcbbbb!!!!!!qbbhbdbd bffbfbbfbfbbbfb fbbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-admin">\n\t\t\t\t\t\tqbbhbdbdbffbfbbfbfbbbfbfbbbzcbbbb!!!!!!qbbhbdbdbffbfbbfbfbbbfbfbbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-user">\n\t\t\t\t\t\tqbbh bdbdbffb fbbfbfbbbfbfbbbz cbbbb!!!!!!qbbhbd bdbffbfbbfbfbbbfbf bbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-admin">\n\t\t\t\t\t\tqbbhbdbdbff bfbbfbfbbbfbfb bbzcbbbb! !!!!!qbbhbd bdbffbfbbfbfbbbf bfbbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class="support_widget__mess-item support_widget__mess-user">\n\t\t\t\t\t\tqb bhbd bdbff bfbbfbfb bfbfbbbzcbbbb!!! !!!qbbhbdbdb ffbfbbfb bbbfbfbbbzcbbbb!!!!!!qbb hbdbdbffbfbbfbfbbbfbfbbbzcbbbb!!!!!!\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<textarea class="support_widget__entry" rows="5" cols="39" name="text" placeholder="\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435"></textarea>\n\t\t\t\t<button type="button" id="support_widget__submit" class="support_widget__button">\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C</button>\n\t\t\t</form>\n\t\t</div>';
 			document.body.insertBefore(this.widgetElement, document.body.nextSibling);
-			this.widgetElement.style.top = x + '%';
-			this.widgetElement.style.left = y + '%';
+			/*	this.widgetElement.style.top =`${x}%`;
+   	this.widgetElement.style.left = `${y}%`; */
 
 			this.created = true;
 		}
 	};
 
 	Widget.show();
-}
-
-exports.default = openWidjet;
-
-/***/ }),
-
-/***/ "./src/widjet/widjet/view/view.js":
-/*!****************************************!*\
-  !*** ./src/widjet/widjet/view/view.js ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
+}exports.default = openWidjet;
 
 /***/ }),
 
@@ -339,7 +323,7 @@ var Widget = function () {
             // делаем вебсокер запрос о конфиге
             var config = {
                 colorSchema: 'light',
-                widgetPos: 'down-right'
+                widgetPos: 'top'
             };
             return config;
         }

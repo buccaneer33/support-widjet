@@ -1,11 +1,11 @@
 class WidgetPosition {
 
 	constructor() {
-     const TopPosition = {x:"5", y:"40"};
-     const LeftPosition = {x:"20", y:"5"};
-     const RightPosition = {x:"20", y:"74"};
-     const DownLeftPosition = {x:"40", y:"5"};
-     const DownRightPosition = {x:"40", y:"74"};
+     const TopPosition = {x:"30", y:"50"};
+     const LeftPosition = {x:"50", y:"15"};
+     const RightPosition = {x:"50", y:"85"};
+     const DownLeftPosition = {x:"70", y:"15"};
+     const DownRightPosition = {x:"70", y:"85"};
 
 		this.positionTypes = {
 			'top' : TopPosition,
