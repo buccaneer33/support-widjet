@@ -32,7 +32,7 @@ function openWidjet(config, token){
 			this.widgetElement.setAttribute('class', 'support_widget');
 			this.widgetElement.classList.add('support_widget_container--down-left');
 			this.widgetElement.innerHTML = `
-			<div class="support_widget__body support_widget__orange">
+			<div class="support_widget__body support_widget__blue">
 			<button type="button" id="support_widget__close" class="support_widget__close"></button>
 			<div class="support_widget__header">
 				<div class="support_widget__header-img">
@@ -50,7 +50,7 @@ function openWidjet(config, token){
 						<span class="support_widget__mess-name">Систеное</span>
 						<span class="support_widget__mess-date">6.15/19.09.2018</span>
 					</span>
-					Здравствуйте, введите ваше имя что бы мы могли начать общение. 
+					Здравствуйте, введите ваше имя что бы мы могли начать общение.
 					</li>
 
 					<li class="support_widget__mess-item">
@@ -130,7 +130,7 @@ function openWidjet(config, token){
 					</ul>
 				</div>
 				<textarea class="support_widget__entry" rows="5" cols="39" name="text" placeholder="Введите сообщение"></textarea>
-				<button type="button" id="support_widget__submit" class="support_widget__button">Отправить</button>
+				<button type="button" id="support_widget__submit" class="support_widget__button" disabled>Отправить</button>
 			</form>
 		</div>`;
 			document.body.insertBefore(this.widgetElement, document.body.nextSibling);

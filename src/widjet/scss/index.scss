@@ -265,7 +265,16 @@
         color: #fff;
         border: 1px solid #444;
     }
-
+    .support_widget__button[disabled]{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
+    .support_widget__button[disabled]:hover{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
 }
 // 2
 .support_widget__dark{
@@ -328,7 +337,16 @@
         color: #444;
         border: 1px solid rgb(255, 255, 255);
     }
-
+    .support_widget__button[disabled]{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
+    .support_widget__button[disabled]:hover{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
 
 }
 // 3
@@ -388,6 +406,16 @@
         color:  #fff;
         border: 1px solid  #fff;
     }
+    .support_widget__button[disabled]{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
+    .support_widget__button[disabled]:hover{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
 }
 // 4
 .support_widget__green{
@@ -445,6 +473,16 @@
         background-color:  rgb(255, 255, 255);
         color:  rgb(76, 163, 76);
         border: 1px solid  rgb(76, 163, 76);
+    }
+    .support_widget__button[disabled]{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
+    .support_widget__button[disabled]:hover{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
     }
 }
 // 5
@@ -504,6 +542,16 @@
         color: rgb(255, 255, 255);
         border: 1px solid rgb(224, 157, 31);
 
+    }
+    .support_widget__button[disabled]{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
+    }
+    .support_widget__button[disabled]:hover{
+        background-color: rgb(168, 168, 168);
+        color: rgb(94, 94, 94);
+        border: 1px solid rgb(160, 160, 160);
     }
     .support_widget__button:hover{
         background-color:  rgb(255, 255, 255);
