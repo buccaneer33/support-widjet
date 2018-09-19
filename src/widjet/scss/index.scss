@@ -18,6 +18,44 @@
     top: calc(70% - 200px);
     left: 1%;
 }
+.support_widget_container--closed{
+    width: 50px !important;
+    height: 50px  !important;
+
+
+    .support_widget__close,
+    .support_widget__header-desc,
+    h4, .support_widget__form,
+       .support_widget__messages,
+       .support_widget__mess-list,
+       .support_widget__mess-item,
+       .support_widget__entry,
+       .support_widget__button{
+        height: 0px !important;
+        width: 0px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        border-radius: 0px !important;
+        font-size: 0px !important;
+        opacity: 0;
+
+       }
+       .support_widget__header{
+           height: 50px;
+           width: 50px;
+       } 
+       .support_widget__header-img{
+        height: 41px;
+        width: 45px;
+
+        & img{
+            height: 41px;
+            width: 41px;
+        }
+    } 
+}
+
 .support_widget{
     display: block;
     background-color: #fff;
@@ -26,15 +64,36 @@
     position: fixed;
     width: 300px;
     height: 400px;
-   // bottom: 100px;
-   // right: 5%;
     padding: 5px;
-  //  transform: translate(50%, -50%);
+    overflow: hidden;
+    transition: all 0.1s ease 0s;
 
     &__body{
         height: 100%;
         width: 100%;
+        padding: 0 0 5px 0;
+        box-sizing: border-box;
+        position: relative;
 
+    }
+    &__close{
+        right: -15px;
+        top: -15px;
+        margin: 0;
+        padding: 9px 9px 0px 0;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        background-color: brown;
+        cursor: pointer;
+
+        &:after{
+            content: "\02DF";
+            color: #fff;
+            font-size: 26px;
+        }
     }
     &__header{
         height: 15%;
@@ -49,15 +108,21 @@
         justify-content: space-around;
 
         &-img{
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
             border-radius: 50%;
             overflow: hidden;
+            cursor: pointer;
+
+           & img{
+            height: 45px;
+            width: 45px; 
+           }
         }
         &-desc{
-            width: 240px;
+            width: 200px;
             height: 50px;
-            padding: 0 0 0 20px;
+            padding: 0 0 0 0px;
             box-sizing: border-box;
         }
         & h4{
@@ -69,15 +134,18 @@
     &__form{
         height: 85%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
     }
     &__messages{
         height: 62%;
         width: 100%;
         max-width: 300px;
         overflow-y: auto;
-     //   border: 1px solid black;
         box-sizing: border-box;
-        border-radius: 5px;
         padding: 5px;
         margin-bottom: 10px;
         margin-bottom: 7px;
@@ -92,20 +160,33 @@
         flex-wrap: nowrap;
     }
     &__mess-item{
-        width: 65%;
+        
         word-wrap: break-word;
         border: 1px solid rgba(0,0,0,0.3);
-        margin: 2px 0;
+        margin: 11px 0;
         padding: 5px;
         border-radius: 5px;
+        position: relative;
+    }
+    &__mess-info{
+        position: absolute;
+        top: 105%;
+        font-size: 10px;
+    }
+    &__mess-name{
+        padding: 0 5px;
+
+    }
+    &__mess-date{
+        padding: 0 5px;
     }
     &__mess-user{
-       // float: left;
        align-self: flex-start;
+       width: 65%;
     }
     &__mess-admin{
-      //  float: right;
       align-self: flex-end;
+      width: 65%;
     }
     &__entry{
         z-index: 100;
@@ -115,8 +196,10 @@
         border-radius: 5px;
         padding: 5px 15px;
         cursor: pointer;
+        transition: all 0.2s ease-in-out 0s;
     }
 }
+// 1
 .support_widget__light{
     background-color: #eee;
     color: #333;
@@ -159,14 +242,23 @@
         background-color: #fff;
     }
     .support_widget__button{
-
+        background-color: #bbb;
+        color: rgb(255, 255, 255);
+        border: 1px solid #444;
     }
+    .support_widget__button:hover{
+        background-color: #444;
+        color: #fff;
+        border: 1px solid #444;
+    }
+
 }
+// 2
 .support_widget__dark{
-    background-color: #111;
+    background-color: rgb(48, 48, 48);
     color: #fff;
     .support_widget__header{
-        background-color: #444;
+        background-color: rgb(0, 0, 0);
 
     }
     .support_widget__header-img{
@@ -187,6 +279,9 @@
         background-color: #555
 
     }
+    .support_widget__mess-item{
+        background-color: rgb(36, 36, 36)
+    }
     .support_widget__mess-list{
 
     }
@@ -194,11 +289,16 @@
         
 
     }
+    .support_widget__mess-info{
+        color: rgb(255, 255, 255);
+    }
     .support_widget__mess-user{
-        background-color: rgba(1,1,1,0.7)
+        background-color: rgba(56, 71, 50, 0.3);
+        color: rgb(228, 237, 253);
     }
     .support_widget__mess-admin{
-        background-color: rgba(5,5,5,1.0)
+        background-color: rgba(75, 85, 107, 0.3);
+        color: rgb(235, 255, 230);
     }
     .support_widget__entry{
         background-color: #444;
@@ -208,15 +308,22 @@
         background-color: #444;
         color: #fff;
         border: 1px solid #bbb;
-
+    }
+    .support_widget__button:hover{
+        background-color: rgb(255, 255, 255);
+        color: #444;
+        border: 1px solid rgb(255, 255, 255);
     }
 
+
 }
+// 3
 .support_widget__blue{
-    background-color: #fff;
+    background-color: rgba(76,117,163,1);
     color: #444;
     .support_widget__header{
         background-color: rgba(76,117,163,1);
+        color: #fff;
 
     }
     .support_widget__header-img{
@@ -245,11 +352,11 @@
 
     }
     .support_widget__mess-user{
-        background-color: rgba(255,255,255,1.0);
+        background-color: rgba(243, 255, 236,0.5);
         border-color: rgba(230, 230, 210, 1);
 }
     .support_widget__mess-admin{
-        background-color: rgba(235,235,255,1.0);
+        background-color: rgba(235,235,255,0.4);
         border-color: rgba(235,235,255,1.0);
     }
     .support_widget__entry{
@@ -262,5 +369,131 @@
         border: 1px solid rgba(76,117,163,1);;
 
     }
+    .support_widget__button:hover{
+        background-color:  rgba(76,117,163,1);
+        color:  #fff;
+        border: 1px solid  #fff;
+    }
+}
+// 4
+.support_widget__green{
+    background-color: rgb(106, 165, 136);
+    color: #444;
+    .support_widget__header{
+        background-color: rgb(106, 165, 136);
+        color: rgb(255, 255, 255)
 
+    }
+    .support_widget__header-img{
+        border: 2px solid rgb(235, 235, 235);
+
+        }
+    .support_widget__header-desc{
+
+        }
+    h4{
+
+        }
+
+    .support_widget__form{
+
+    }
+    .support_widget__messages{
+        background-color: rgb(252, 252, 252)
+
+    }
+    .support_widget__mess-list{
+
+    }
+    .support_widget__mess-item{
+        
+
+    }
+    .support_widget__mess-user{
+        background-color: rgb(236, 255, 227);
+        border-color: rgb(236, 255, 227);
+}
+    .support_widget__mess-admin{
+        background-color: rgb(228, 228, 255);
+        border-color: rgba(235,235,255,1.0);
+    }
+    .support_widget__entry{
+        background-color: #fff;
+        color: #444;
+    }
+    .support_widget__button{
+        background-color: rgb(76, 163, 76);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(153, 199, 132);
+
+    }
+    .support_widget__button:hover{
+        background-color:  rgb(255, 255, 255);
+        color:  rgb(76, 163, 76);
+        border: 1px solid  rgb(76, 163, 76);
+    }
+}
+// 5
+.support_widget__orange{
+    background-color: rgb(255, 255, 255);
+    color: rgb(36, 36, 36);
+
+    .support_widget__header{
+        background-color: rgb(224, 157, 31);
+        color: rgb(255, 255, 255)
+
+    }
+    .support_widget__header-img{
+        border: 2px solid rgb(235, 235, 235);
+
+        }
+    .support_widget__header-desc{
+
+        }
+    h4{
+
+        }
+
+    .support_widget__form{
+
+    }
+    .support_widget__messages{
+        background-color: rgb(252, 252, 252)
+
+    }
+    .support_widget__mess-list{
+
+    }
+    .support_widget__mess-item{
+        
+
+    }
+    .support_widget__mess-info{
+        color: rgb(36, 36, 36);
+    }
+    .support_widget__mess-user{
+        background-color: rgb(247, 207, 33);
+        border-color: rgb(236, 255, 227);
+        color: rgb(255, 255, 255);
+}
+    .support_widget__mess-admin{
+        background-color: rgb(247, 247, 247);
+        border-color: rgba(235,235,255,1.0);
+        color: rgb(36, 36, 36);
+    }
+    .support_widget__entry{
+        background-color: #fff;
+        color: #444;
+    }
+    .support_widget__button{
+        background-color: rgb(224, 157, 31);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(224, 157, 31);
+
+    }
+    .support_widget__button:hover{
+        background-color:  rgb(255, 255, 255);
+        color:  rgb(224, 157, 31);
+        border: 1px solid  rgb(224, 157, 31);
+    }
 }

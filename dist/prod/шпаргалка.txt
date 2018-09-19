@@ -1,0 +1,19 @@
+.support_widget {
+  .support_widget_container--top // положение сверху
+  .support_widget_container--left //положение слева
+  .support_widget_container--right // положение справа
+  .support_widget_container--down-left //положение внизу слева
+  .support_widget_container--down-right // положение внизу справа
+
+  .support_widget_container--closed // виджет минимизирован
+
+}
+
+.support_widget__body{
+  .support_widget__light // светлая тема
+  .support_widget__dark // темная тема
+  .support_widget__blue // синяя
+  .support_widget__green // зеленая
+  .support_widget__orange // оранжевая
+
+}

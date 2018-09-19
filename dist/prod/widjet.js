@@ -1,38 +1,8 @@
-"use strict";
-// import View from '../view/view';
-import DOMEN from '../../settings/settings.js';
-import PATH from '../../settings/settings.js';
-import WidgetPosition from '../helpers/widget-position';
-
-function openWidjet(config, token){
-
-	var options = {
-	 domain: JSON.stringify(DOMEN.DOMEN),
-		path: JSON.stringify(PATH.PATH),
-        bg_color: "FFFFFF",
-        colorSchema: config.colorSchema,
-		widgetPos: config.widgetPos,
-		person: 'Фиталий Филиповский',
-		personAtr: 'Консультант' 
-	};
-	console.log('widgetPos ' + options.widgetPos); 
-	
-	let pos = new WidgetPosition();
-	let posSchema = pos.returnPosByType(options.widgetPos);
-	let x = (posSchema.x);                       
-	let y = (posSchema.y);
-
-	var Widget = {
-		created: false,
-		widgetElement: null,
-		show: function() {
-			if (this.created)
-				return;
-			this.widgetElement = document.createElement('div');
-			this.widgetElement.setAttribute('class', 'support_widget');
-			this.widgetElement.classList.add('support_widget_container--down-left');
+this.widgetElement = document.createElement('div');
+			this.widgetElement.setAttribute('class', 'support_widget'); /* главный блок */
+			this.widgetElement.classList.add('support_widget_container--down-left'); /* в него позиционирование и закрытие */
 			this.widgetElement.innerHTML = `
-			<div class="support_widget__body support_widget__orange">
+			<div class="support_widget__body support_widget__orange"> /* а в боди цветовая схема */
 			<button type="button" id="support_widget__close" class="support_widget__close"></button>
 			<div class="support_widget__header">
 				<div class="support_widget__header-img">
@@ -118,17 +88,4 @@ function openWidjet(config, token){
 				<textarea class="support_widget__entry" rows="5" cols="39" name="text" placeholder="Введите сообщение"></textarea>
 				<button type="button" id="support_widget__submit" class="support_widget__button">Отправить</button>
 			</form>
-		</div>`;
-			document.body.insertBefore(this.widgetElement, document.body.nextSibling);
-
-			
-			this.created = true;
-		}
-	}
-
-	Widget.show();
-
-}
-
-
-export default openWidjet;
+		</div>`
