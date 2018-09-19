@@ -36,7 +36,9 @@ function openWidjet(config, token){
 			<button type="button" id="support_widget__close" class="support_widget__close"></button>
 			<div class="support_widget__header">
 				<div class="support_widget__header-img">
-					<img src="http://promopost.net/img/Content-UI-img-icons-png-cs.png" />
+					<button type="button" class="support_widget__header-button">
+						<img src="http://promopost.net/img/Content-UI-img-icons-png-cs.png" />
+					</button>
 				</div>
 				<div class="support_widget__header-desc"><h4>${options.person}</h4></div>
 			</div>
@@ -47,8 +49,20 @@ function openWidjet(config, token){
 					<span class="support_widget__mess-info">
 						<span class="support_widget__mess-name">Систеное</span>
 						<span class="support_widget__mess-date">6.15/19.09.2018</span>
-					</span>	
+					</span>
 					Здравствуйте, введите ваше имя что бы мы могли начать общение. 
+					</li>
+
+					<li class="support_widget__mess-item">
+					<span class="support_widget__mess-info">
+						<span class="support_widget__mess-name">Систеное</span>
+						<span class="support_widget__mess-date">6.15/19.09.2018</span>
+					</span>
+					<p>Здравствуйте, введите ваше имя что бы мы могли начать общение.</p>
+					<p name="name" class="support_widget__name-form">
+						<input type="text" name="name" class="support_widget__name-input" />
+						<button type="button" class="support_widget__name-button">Ввод</button>
+					</p>
 					</li>
 						<li class="support_widget__mess-item support_widget__mess-user">
 						<span class="support_widget__mess-info">

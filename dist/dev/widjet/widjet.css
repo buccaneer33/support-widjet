@@ -91,6 +91,11 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around; }
+    .support_widget__header-button {
+      padding: 0;
+      margin: 0;
+      border: none;
+      cursor: pointer; }
     .support_widget__header-img {
       height: 45px;
       width: 45px;
@@ -157,7 +162,8 @@
     width: 65%; }
   .support_widget__entry {
     z-index: 100;
-    border: 1px solid #000; }
+    border: 1px solid #000;
+    resize: none; }
   .support_widget__button {
     border-radius: 5px;
     padding: 5px 15px;
